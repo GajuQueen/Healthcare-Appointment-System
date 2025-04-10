@@ -11,7 +11,7 @@ public class ATM {
     }
     public void withdraw(double amount){
         this.balance -= amount;
-        System.out.println("Withdraw: " + amount + ", New Balance: " + this.balance);
+        System.out.println("Withdrawww: " + amount + ", New Balance: " + this.balance);
     }
     public double checkBalance(){
         return balance;

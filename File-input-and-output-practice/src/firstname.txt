@@ -4,3 +4,74 @@ fjkfn
 afknjg
 nfjnf
 hhjug
+
+//public class ArrayList {
+//    public static void main(String[] args) {
+//        int[] numbers = {5,10,15};
+//        System.out.println(numbers[1]);
+//    }
+//}
+
+import java.util.ArrayList;
+//public class ArrayList {
+//    public static void main(String[] args) {
+//        MyArrayList<String> lang= new MyArrayList<String>();
+//        lang.add("java");
+//        lang.add("python");
+//        System.out.println("Size of the List:" + lang.size());
+//    }
+//}
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ArrayList {
+    public static void main(String[] args) {
+        Map<Character, Integer> stu = new HashMap<>();
+        stu.put('A', 1);
+        stu.put('B', 2);
+        System.out.println(stu.get('A'));
+    }
+}
+
+//Question 13
+public class ArrayList {
+    public static void main(String[] args) {
+        try {
+                    int a = 10;
+                    int b = 0;
+                    int result = a / b;
+                }
+                catch(ArithmeticException e){
+                    System.out.println("Division by zero is not allowed!");
+                }
+    }
+}
+
+//Question 14
+public class ArrayList {
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isEven(4));
+        System.out.println(isEven(7));
+    }
+}
+
+
+import java.io.FileWriter;
+import java.io.IOException;
+public class ArrayList {
+    public static void main(String[] args) {
+        String fileName = "output.txt";
+        try (FileWriter writer = new FileWriter(fileName, true)) {
+            writer.write("Hello, World!\n");
+            System.out.println("Text appended successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
+    }
+}

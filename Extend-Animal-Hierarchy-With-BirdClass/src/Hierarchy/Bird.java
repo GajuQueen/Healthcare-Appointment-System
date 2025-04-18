@@ -2,12 +2,9 @@ package Hierarchy;
 
 public class Bird extends Animal {
 
-    String name;
-
-    public Bird(String name) {
-        this.name = name;
+    Bird(){
+        super("Col");
     }
-
     public void fly() {
         System.out.println(name + " does: "+ "Flying!");
     }

@@ -3,7 +3,7 @@ package Hierarchy;
 public class Main {
     public static void main(String[] args) {
 
-        Bird bird = new Bird("Col");
+        Bird bird = new Bird();
         bird.makeSound();
         bird.fly();
 

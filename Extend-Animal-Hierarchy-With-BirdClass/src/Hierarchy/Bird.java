@@ -12,6 +12,6 @@ public class Bird extends Animal {
 
     @Override
     public void makeSound() {
-        System.out.println(name + " say: " + "Chirp!");
+        System.out.println(name + " says: " + "Chirp!");
     }
 }

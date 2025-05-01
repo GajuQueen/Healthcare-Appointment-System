@@ -24,6 +24,6 @@ public class Pair <k, v>{
 
     @Override
     public String toString() {
-        return "Pair [key=" + key + ", value=" + value + "]";
+        return   key + ", value= " + value ;
     }
 }

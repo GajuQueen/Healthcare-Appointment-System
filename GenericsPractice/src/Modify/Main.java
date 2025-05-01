@@ -1,11 +1,13 @@
-import Modify.Box;
+package Modify;
 
 public class Main {
     public static void main(String[] args) {
         Box<String> string = new Box<>();
         string. setContent("Yoo Jesus loves you");
+
         Box<Integer> integer = new Box<>();
-        integer. setContent(1);
+        integer. setContent(123);
+
         Box<Double> double1 = new Box<>();
 
         System.out.println(string.getContent());

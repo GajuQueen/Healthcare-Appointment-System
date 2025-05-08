@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ArrayManipulationChallenge/ArrayManipulationChallenge.iml" filepath="$PROJECT_DIR$/ArrayManipulationChallenge/ArrayManipulationChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Book/Book.iml" filepath="$PROJECT_DIR$/Book/Book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Counter/Counter.iml" filepath="$PROJECT_DIR$/Counter/Counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extend PaymentProcessor with Bitcoin Support/Extend PaymentProcessor with Bitcoin Support.iml" filepath="$PROJECT_DIR$/Extend PaymentProcessor with Bitcoin Support/Extend PaymentProcessor with Bitcoin Support.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Extend-Animal-Hierarchy-With-BirdClass/Extend-Animal-Hierarchy-With-BirdClass.iml" filepath="$PROJECT_DIR$/Extend-Animal-Hierarchy-With-BirdClass/Extend-Animal-Hierarchy-With-BirdClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/File-input-and-output-practice/File-input-and-output-practice.iml" filepath="$PROJECT_DIR$/File-input-and-output-practice/File-input-and-output-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Filtering Emplpyee Data by Salary-stream/Filtering Emplpyee Data by Salary-stream.iml" filepath="$PROJECT_DIR$/Filtering Emplpyee Data by Salary-stream/Filtering Emplpyee Data by Salary-stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generic mergeArrays Method/Generic mergeArrays Method.iml" filepath="$PROJECT_DIR$/Generic mergeArrays Method/Generic mergeArrays Method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Generics and Lambda Expressions in Java/Generics and Lambda Expressions in Java.iml" filepath="$PROJECT_DIR$/Generics and Lambda Expressions in Java/Generics and Lambda Expressions in Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GenericsBasics/GenericsBasics.iml" filepath="$PROJECT_DIR$/GenericsBasics/GenericsBasics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GenericsPractice/GenericsPractice.iml" filepath="$PROJECT_DIR$/GenericsPractice/GenericsPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Grade Manager System/Grade Manager System.iml" filepath="$PROJECT_DIR$/Grade Manager System/Grade Manager System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InheritancePractice/InheritancePractice.iml" filepath="$PROJECT_DIR$/InheritancePractice/InheritancePractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/Interfaces/Interfaces.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Key-Value Utility/Key-Value Utility.iml" filepath="$PROJECT_DIR$/Key-Value Utility/Key-Value Utility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lambda Expression for Filtering Even Numbers/Lambda Expression for Filtering Even Numbers.iml" filepath="$PROJECT_DIR$/Lambda Expression for Filtering Even Numbers/Lambda Expression for Filtering Even Numbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ListManipulatiionChallenge/ListManipulatiionChallenge.iml" filepath="$PROJECT_DIR$/ListManipulatiionChallenge/ListManipulatiionChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PersonalATM/PersonalATM.iml" filepath="$PROJECT_DIR$/PersonalATM/PersonalATM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QUIZ 1/QUIZ 1.iml" filepath="$PROJECT_DIR$/QUIZ 1/QUIZ 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QUIZ 2/QUIZ 2.iml" filepath="$PROJECT_DIR$/QUIZ 2/QUIZ 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Shape Hierarchy with Abstract Class/Shape Hierarchy with Abstract Class.iml" filepath="$PROJECT_DIR$/Shape Hierarchy with Abstract Class/Shape Hierarchy with Abstract Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SheCanCode Tasks.iml" filepath="$PROJECT_DIR$/.idea/SheCanCode Tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThreadPractice/ThreadPractice.iml" filepath="$PROJECT_DIR$/ThreadPractice/ThreadPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WildCard/WildCard.iml" filepath="$PROJECT_DIR$/WildCard/WildCard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coding-task-1/coding-task-1.iml" filepath="$PROJECT_DIR$/coding-task-1/coding-task-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coding-task-2/coding-task-2.iml" filepath="$PROJECT_DIR$/coding-task-2/coding-task-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studentManager/studentManager.iml" filepath="$PROJECT_DIR$/studentManager/studentManager.iml" />
+    </modules>
+  </component>
+</project>

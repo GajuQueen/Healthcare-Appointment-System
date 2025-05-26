@@ -16,6 +16,10 @@ public class UserService {
         return repository.save(user);
     }
 
+    public void deleteuser(User user) {
+        repository.delete(user);
+    }
+
     public List<User> selectAll() {
         return repository.findAll();
     }

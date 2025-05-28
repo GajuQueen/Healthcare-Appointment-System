@@ -1,4 +1,4 @@
-package Post;
+package org.example.blogplatforms.Post;
 
 import org.example.blogplatforms.Comment.Comment;
 import org.example.blogplatforms.User.User;

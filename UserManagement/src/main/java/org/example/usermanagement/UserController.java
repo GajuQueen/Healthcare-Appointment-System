@@ -57,10 +57,5 @@ public class UserController {
         user.setPhoneNumber(dto.getPhoneNumber());
         return userService.updateTask(id, user);
     }
-
-
-
-
-
 }
 

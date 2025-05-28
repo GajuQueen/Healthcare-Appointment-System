@@ -21,7 +21,8 @@ public class Userservice {
     }
 
     public User selectuserbyid(Long id) {
-        return userRepository.findById(id).orElseThrow(()-> new RuntimeException("user not found"));
+        return userRepository.findById(id)
+                .orElseThrow(()-> new RuntimeException("user not found"));
     }
 
     public User updateUser(Long id,User updatetask) {

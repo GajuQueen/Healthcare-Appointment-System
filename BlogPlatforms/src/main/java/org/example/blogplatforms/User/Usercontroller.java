@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/User")
 @RequiredArgsConstructor
 public class Usercontroller {
     private Userservice userservice;

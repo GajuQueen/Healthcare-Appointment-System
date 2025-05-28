@@ -6,8 +6,8 @@ import java.time.LocalDate;
 
 @Data
 public class UserProfileDTO {
-    private String Bio;
-    private LocalDate Dob;
-    private String Full_names;
+    private String bio;
+    private LocalDate dob;
+    private String full_names;
 
 }

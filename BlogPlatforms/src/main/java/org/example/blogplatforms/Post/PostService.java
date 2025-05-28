@@ -22,12 +22,13 @@ public class PostService {
         return postRepository.findByUser(user);
     }
 
-    public List<Post> findallposts() {
+    public List<Post> findAllposts() {
         return postRepository.findAll();
     }
 
-    public List<Post> findPostById(Long userId) {
-        return postRepository.findPostById(userId);
+    public Post findById(Long postId) {
+        return postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("Post not found"));
     }
 
     public void deletePost(Long postId) {

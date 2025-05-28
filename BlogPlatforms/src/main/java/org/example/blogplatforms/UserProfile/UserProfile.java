@@ -1,4 +1,4 @@
-package UserProfile;
+package org.example.blogplatforms.UserProfile;
 
 import org.example.blogplatforms.User.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -21,9 +21,9 @@ public class UserProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String bio;
-    private LocalDate dob;
-    private String full_names;
+    private String Bio;
+    private LocalDate Dob;
+    private String Full_names;
 
     @OneToOne
     @JoinColumn(name = "user_id", unique = true, nullable = false)

@@ -1,5 +1,6 @@
 package org.example.blogplatforms;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,5 +23,6 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "post_id", nullable = false)
+    @JsonBackReference
     private Post post;
 }

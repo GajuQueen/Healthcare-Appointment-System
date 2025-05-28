@@ -1,5 +1,8 @@
 package org.example.blogplatforms;
 
+import org.example.blogplatforms.User.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,12 +27,6 @@ public class Post {
     @Column(nullable = false)
     private String content;
 
-//    @ManyToOne
-////    @JoinColumn(name = "user_id", nullable = false)
-////    private User user;  // The user who created the post
-    @Column(name = "user_id", nullable = false)
-    private Long userId;
-
     @CreationTimestamp
     @Column(nullable = false)
     private Timestamp created_at;
@@ -39,10 +36,10 @@ public class Post {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
+    @JsonBackReference
     private User user;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Comment> comments;
-
-
 }

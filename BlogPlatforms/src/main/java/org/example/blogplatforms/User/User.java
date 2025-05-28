@@ -1,9 +1,12 @@
-package org.example.blogplatforms;
+package org.example.blogplatforms.User;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.blogplatforms.Post;
+import org.example.blogplatforms.UserProfile;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -21,10 +24,10 @@ public class User {
     private Long id;
 
     @Column(unique = true, nullable = false)
-    private String username;
+    private String Username;
 
     @Column(unique = true, nullable = false)
-    private String email;
+    private String Email;
 
     @CreationTimestamp
     @Column(nullable = false)
@@ -34,10 +37,12 @@ public class User {
     @Column(nullable = true) //No need since it is setted by default
     private Timestamp updated;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonManagedReference
     private UserProfile userProfile;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Post> posts;
 
 

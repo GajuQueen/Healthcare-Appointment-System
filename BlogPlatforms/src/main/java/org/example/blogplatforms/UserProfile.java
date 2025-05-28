@@ -1,5 +1,7 @@
 package org.example.blogplatforms;
 
+import org.example.blogplatforms.User.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +11,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name = "UserProfile")
@@ -26,6 +27,7 @@ public class UserProfile {
 
     @OneToOne
     @JoinColumn(name = "user_id", unique = true, nullable = false)
+    @JsonBackReference
     private User user;
 
     @CreationTimestamp

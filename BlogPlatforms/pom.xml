@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>BlogPlatforms</artifactId>
+    <artifactId>BlogPlatform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BlogPlatforms</name>
-    <description>BlogPlatforms</description>
+    <name>BlogPlatform</name>
+    <description>BlogPlatform</description>
     <url/>
     <licenses>
         <license/>
@@ -51,6 +51,17 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.8.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.8.8</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -59,11 +70,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.8.8</version> <!-- Use the latest version -->
         </dependency>
     </dependencies>
 

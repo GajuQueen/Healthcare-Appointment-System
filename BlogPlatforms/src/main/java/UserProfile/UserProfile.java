@@ -1,4 +1,4 @@
-package org.example.blogplatforms;
+package UserProfile;
 
 import org.example.blogplatforms.User.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;

@@ -1,5 +1,6 @@
 package org.example.blogplatforms;
 
+import org.example.blogplatforms.Comment.Comment;
 import org.example.blogplatforms.User.User;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;

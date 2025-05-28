@@ -1,10 +1,11 @@
-package org.example.blogplatforms;
+package org.example.blogplatforms.Comment;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.blogplatforms.Post;
 
 @Entity
 @Data

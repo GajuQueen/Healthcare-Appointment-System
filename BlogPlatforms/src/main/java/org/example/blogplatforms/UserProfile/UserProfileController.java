@@ -28,7 +28,13 @@ public class UserProfileController {
                 userprofile.setBio(dto.getBio());
                 userprofile.setDob(dto.getDob());
                 return userProfileService.updateUserProfile(id, userprofile);
-
     }
+
+    @GetMapping
+    @Operation(summary = "Get a user's profile")
+    public UserProfile getUserProfilebyid(@PathVariable Long id) {
+        return userProfileService .selectUserProfilebyid(id);
+    }
+
 
 }

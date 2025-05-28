@@ -24,13 +24,13 @@ public class Usercontroller {
 
     @GetMapping("/{id}")
     @Operation(summary = "Get a user id")
-    public List<User> getuserbyid(User user){
+    public List<User> getallusers(User user){
         return userservice.selectallusers();
     }
 
     @GetMapping("/users")
     @Operation(summary = "Get all users")
-    public User getallusers(@PathVariable Long id){
+    public User getuserbyid(@PathVariable Long id){
         return userservice.selectuserbyid(id);
     }
 

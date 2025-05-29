@@ -19,7 +19,7 @@ public class PostController {
         return postService.createPost(title, content);
     }
 
-    @GetMapping
+    @GetMapping("/user")
     @Operation(summary = "Get all posts in the system")
     public List<Post> getAllPosts() {
         return postService.findAllposts();

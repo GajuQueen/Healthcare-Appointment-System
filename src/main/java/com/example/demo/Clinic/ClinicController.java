@@ -1,5 +1,6 @@
 package com.example.demo.Clinic;
 
+import com.example.demo.Dto.ClinicDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -21,7 +22,7 @@ public class ClinicController {
             summary = "Create a clinic"
     )
     public ResponseEntity<Clinic> createClinic(@RequestBody @Valid ClinicDto dto){
-        Clinic clinic = clinicService.createClinic(dto);
+        Clinic clinic = clinicService.createClinic(new ClinicDto());
         return new ResponseEntity<>(clinic, HttpStatus.CREATED);
     }
     @GetMapping
@@ -36,7 +37,7 @@ public class ClinicController {
     @Operation(
             summary = "Get clinic by ID"
     )
-    public ResponseEntity<Clinic> getClinicById(@RequestBody @Valid Long id){
+    public ResponseEntity<Clinic> getClinicById(@RequestBody @Valid int id){
         var clinic = clinicService.getClinicById(id);
         return new ResponseEntity<>(clinic, HttpStatus.OK);
     }
@@ -44,12 +45,12 @@ public class ClinicController {
     @Operation(
             summary = "Update a clinic"
     )
-    public ResponseEntity<Clinic> updateClinic(@PathVariable Long id, ClinicDto dto){
+    public ResponseEntity<Clinic> updateClinic(@PathVariable int id, ClinicDto dto){
         var clinic = clinicService.updateClinic(id, dto);
         return new ResponseEntity<>(clinic, HttpStatus.OK);
     }
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteClinicById(@PathVariable Long id){
+    public ResponseEntity<Void> deleteClinicById(@PathVariable int id){
         clinicService.deleteClinicById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

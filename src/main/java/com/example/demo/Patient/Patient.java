@@ -3,7 +3,8 @@ package com.example.demo.Patient;
 import com.example.demo.Appointment.Appointment;
 import com.example.demo.Clinic.Clinic;
 import com.example.demo.Common;
-import com.example.demo.MedicalRecords.MedicalRecords;
+import com.example.demo.MedicalRecords.MedicalRecord;
+import com.example.demo.MedicalRecords.MedicalRecord;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
@@ -38,7 +39,7 @@ public class Patient extends Common {
 
     @OneToMany(mappedBy = "patient")
     @JsonManagedReference
-    private List<MedicalRecords> medicalRecords;
+    private List<MedicalRecord> medicalRecords;
 
 
 }

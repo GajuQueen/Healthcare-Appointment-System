@@ -8,15 +8,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@MappedSuperclass
 public class Common {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private int id;
+   private Long id;
     @Column(length = 50)
     private String Firstname;
     @Column(length = 50)

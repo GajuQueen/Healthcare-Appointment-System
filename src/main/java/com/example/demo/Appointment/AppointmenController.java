@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -29,28 +29,28 @@ public class AppointmenController {
 
    @GetMapping
    @Operation(summary = "Get all appointments, filter by patient, doctor, or date.")
-    public ResponseEntity<List<Appointment>> findAllAppointment(@RequestParam Integer patientid, @RequestParam Integer doctorid, @RequestParam LocalDateTime date){
-       List<Appointment> appointment = appointmentService.findAllAppointment(patientid, doctorid, date);
+    public ResponseEntity<List<Appointment>> findAllAppointment(@RequestParam Long patientid, @RequestParam Long doctorid, @RequestParam LocalDate appointmentDate){
+       List<Appointment> appointment = appointmentService.findAllAppointment(patientid, doctorid, appointmentDate);
        return new ResponseEntity<>(appointment, HttpStatus.OK);
    }
 
-   @GetMapping
+   @GetMapping("/id")
     @Operation(summary = " Get an appointment by ID.")
-    public ResponseEntity<Appointment> findAppointmentById(@RequestParam Integer id){
+    public ResponseEntity<Appointment> findAppointmentById(@PathVariable Long id){
         Appointment appointment = appointmentService.findAppointmentById(id);
         return new ResponseEntity<>(appointment, HttpStatus.OK);
    }
 
    @PutMapping("/id")
     @Operation(summary = " Update an appointment")
-    public ResponseEntity<Appointment> updateAppointment(@PathVariable Integer id, @RequestBody AppointmentDto dto){
+    public ResponseEntity<Appointment> updateAppointment(@PathVariable Long id, @RequestBody AppointmentDto dto){
         Appointment appointment = appointmentService.updateAppointment(id, dto);
         return new ResponseEntity<>(appointment, HttpStatus.OK);
    }
 
    @DeleteMapping("/id")
     @Operation(summary = "Delete an appointment")
-    public ResponseEntity<Void> deleteAppointment(@PathVariable Integer id){
+    public ResponseEntity<Void> deleteAppointment(@PathVariable Long id){
        appointmentService.deleteAppointment(id);
        return new ResponseEntity<>(HttpStatus.OK);
    }

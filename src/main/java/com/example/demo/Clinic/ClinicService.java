@@ -23,11 +23,11 @@ public class ClinicService {
     public List<Clinic> getAllClinics() {
         return clinicRepository.findAll();
     }
-    public Clinic getClinicById(int id){
+    public Clinic getClinicById(long id){
         return clinicRepository.findById(id).orElseThrow(() -> new RuntimeException("Clinic not Found."));
     }
 
-    public Clinic updateClinic(int id,ClinicDto dto){
+    public Clinic updateClinic(long id,ClinicDto dto){
 
         Clinic clinic = clinicRepository.findById(id).orElseThrow(() -> new RuntimeException("clinic not found."));
         clinic.setName(dto.getName());
@@ -35,7 +35,7 @@ public class ClinicService {
         clinic.setPhone(dto.getPhone());
         return clinicRepository.save(clinic);
     }
-    public void deleteClinicById(int id){
+    public void deleteClinicById(long id){
         Clinic clinic = clinicRepository.findById(id).orElseThrow(() -> new RuntimeException("Clinic not found"));
         clinicRepository.delete(clinic);
     }

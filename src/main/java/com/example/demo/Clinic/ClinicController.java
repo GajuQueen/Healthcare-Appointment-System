@@ -37,7 +37,7 @@ public class ClinicController {
     @Operation(
             summary = "Get clinic by ID"
     )
-    public ResponseEntity<Clinic> getClinicById(@RequestBody @Valid int id){
+    public ResponseEntity<Clinic> getClinicById(@RequestBody @Valid long id){
         var clinic = clinicService.getClinicById(id);
         return new ResponseEntity<>(clinic, HttpStatus.OK);
     }
@@ -45,12 +45,12 @@ public class ClinicController {
     @Operation(
             summary = "Update a clinic"
     )
-    public ResponseEntity<Clinic> updateClinic(@PathVariable int id, ClinicDto dto){
+    public ResponseEntity<Clinic> updateClinic(@PathVariable long id, ClinicDto dto){
         var clinic = clinicService.updateClinic(id, dto);
         return new ResponseEntity<>(clinic, HttpStatus.OK);
     }
     @DeleteMapping("{id}")
-    public ResponseEntity<Void> deleteClinicById(@PathVariable int id){
+    public ResponseEntity<Void> deleteClinicById(@PathVariable long id){
         clinicService.deleteClinicById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

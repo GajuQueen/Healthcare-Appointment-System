@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 public class DoctorDto {
-    Integer clinicId;
+    Long clinicId;
     private String Firstname;
     private String Lastname;
     @Email(message = "Provide a valid email")

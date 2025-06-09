@@ -24,9 +24,6 @@ public class Clinic extends Common {
     @Column(nullable = false, length = 255)
     @NotBlank
     private String address;
-    @Column(nullable = false, length = 20)
-    @NotBlank
-    private String phone;
     @OneToMany(mappedBy = "clinic", cascade = CascadeType.ALL)
     private List<Patient> patient;
     @OneToMany(mappedBy = "clinic")

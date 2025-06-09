@@ -1,5 +1,6 @@
 package com.example.demo.Patient;
 
+import com.example.demo.Dto.PatientDTO;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

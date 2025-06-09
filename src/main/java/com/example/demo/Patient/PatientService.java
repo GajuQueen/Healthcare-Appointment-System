@@ -1,5 +1,6 @@
 package com.example.demo.Patient;
 
+import com.example.demo.Dto.PatientDTO;
 import com.example.demo.User.User;
 import com.example.demo.User.UserRepository;
 import lombok.RequiredArgsConstructor;

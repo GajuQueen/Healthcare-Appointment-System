@@ -23,7 +23,7 @@ public class DoctorController {
     }
     @GetMapping
     @Operation(summary = "Get all doctors, filter by clinic or specialty")
-    public ResponseEntity<List<Doctor>> getAllDoctors(@RequestParam Integer clinicId, @RequestParam String speciality){
+    public ResponseEntity<List<Doctor>> getAllDoctors(@RequestParam Long clinicId, @RequestParam Specialist speciality){
         List<Doctor> doctor = doctorService.getAllDoctors(clinicId, speciality);
         return new ResponseEntity<>(doctor, HttpStatus.OK);
     }

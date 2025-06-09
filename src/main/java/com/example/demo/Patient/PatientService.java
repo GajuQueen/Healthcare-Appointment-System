@@ -36,7 +36,7 @@ public class PatientService {
         return patientRepository.findByClinicId(clinicId, pageable1);
     }
 
-    public Patient findPatientById(Integer id){
+    public Patient findPatientById(long id){
       return  patientRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException(("patient not found")));
 
@@ -52,7 +52,7 @@ public class PatientService {
         return patientRepository.save(patient);
     }
 
-    public void deletePatient(Integer id){
+    public void deletePatient(long id){
         patientRepository.deleteById(id);
     }
 

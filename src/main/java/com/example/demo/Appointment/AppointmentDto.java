@@ -9,8 +9,8 @@ import java.time.LocalDate;
 
 @Data
 public class AppointmentDto {
-    Integer patientId;
-    Integer doctorId;
+    Long patientId;
+    Long doctorId;
     @Enumerated(EnumType.STRING)
     private AppointmentStatus status;
     private String notes;

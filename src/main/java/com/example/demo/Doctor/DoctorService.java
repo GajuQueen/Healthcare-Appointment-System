@@ -24,16 +24,17 @@ public class DoctorService {
         return doctorRepository.save(doctor);
     }
 
-    public List<Doctor> getAllDoctors(Integer clinicId, String speciality) {
-        return doctorRepository.findDoctorByClinicAndSpeciality(clinicId, speciality);
+    public List<Doctor> getAllDoctors(Long clinicId,Specialist speciality) {
+        return doctorRepository.findDoctorByClinicIdAndSpeciality(clinicId, speciality);
 
     }
 
-    public Doctor getDoctorById(int id){
-        return doctorRepository.findById(id).get();
+    public Doctor getDoctorById(long id){
+        return doctorRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Doctor not found"));
     }
 
-    public Doctor updateDoctor(Integer id, DoctorDto dto){
+    public Doctor updateDoctor(long id, DoctorDto dto){
         Doctor doctor = new Doctor();
         doctor.setFirstname(dto.getFirstname());
         doctor.setLastname(dto.getLastname());
@@ -42,7 +43,7 @@ public class DoctorService {
         return doctorRepository.save(doctor);
     }
 
-    public void deleteDoctor(Integer id){
+    public void deleteDoctor(long id){
         doctorRepository.deleteById(id);
     }
 

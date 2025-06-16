@@ -1,6 +1,7 @@
 package com.example.demo.MedicalRecords;
 
 import com.example.demo.Dto.MedicalRecordDto;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/medical-records")
 @RequiredArgsConstructor
+//@SecurityRequirement(name = "auth")
 public class MedicalRecordController {
 
     private final MedicalRecordService medicalRecordService;

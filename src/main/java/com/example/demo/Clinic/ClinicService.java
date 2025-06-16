@@ -17,6 +17,7 @@ public class ClinicService {
         clinic.setName(dto.getName());
         clinic.setAddress(dto.getAddress());
         clinic.setPhone(dto.getPhone());
+        clinic.setEmail(dto.getEmail());
         return clinicRepository.save(clinic);
     }
 

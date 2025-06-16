@@ -1,6 +1,7 @@
 package com.example.demo.Patient;
 
 import com.example.demo.Dto.PatientDTO;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -11,12 +12,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/patient")
 @RequiredArgsConstructor
+//@SecurityRequirement(name = "auth")
 public class PatientController {
     private final PatientService patientService;
 
-    @PostMapping("/{id}")
-    public ResponseEntity<Patient> createPatient(@PathVariable Integer userId, @RequestBody @Valid PatientDTO dto) {
-        Patient patient = patientService.createPatient(userId, dto);
+    @PostMapping
+    public ResponseEntity<Patient> createPatient(@RequestBody @Valid PatientDTO dto) {
+        Patient patient = patientService.createPatient(dto);
         return new ResponseEntity<>(patient, HttpStatus.CREATED);
     }
 

@@ -19,8 +19,8 @@ public class PatientService {
     private final UserRepository userRepository;
 
 
-    public Patient createPatient(Integer userId, PatientDTO dto){
-        User user = userRepository.findById(userId).orElseThrow(()->new RuntimeException("user not found"));
+    public Patient createPatient(PatientDTO dto){
+//        User user = userRepository.findById(clinicId).orElseThrow(()->new RuntimeException("user not found"));
 
         Patient patient1 = new Patient();
         patient1.setFirstname(dto.getFirstname());

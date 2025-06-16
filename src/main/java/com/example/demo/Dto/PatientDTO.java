@@ -12,6 +12,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class PatientDTO {
+    @NotNull(message = "Clinic ID is required")
+    private Integer clinicId;
     private String Firstname;
     private String Lastname;
     private String Phone;

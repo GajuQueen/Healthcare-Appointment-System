@@ -2,6 +2,7 @@ package com.example.demo.Clinic;
 
 import com.example.demo.Dto.ClinicDto;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -15,15 +16,16 @@ import java.util.List;
 @RequestMapping("/api/clinics")
 @Tag(name = "clinic controller", description = "create new clinic" )
 @RequiredArgsConstructor
+@SecurityRequirement(name = "auth")
 public class ClinicController {
     private final ClinicService clinicService;
     @PostMapping
     @Operation(
             summary = "Create a clinic"
     )
-    public ResponseEntity<Clinic> createClinic(@RequestBody @Valid ClinicDto dto){
-        Clinic clinic = clinicService.createClinic(new ClinicDto());
-        return new ResponseEntity<>(clinic, HttpStatus.CREATED);
+    public ResponseEntity<ClinicDto> createClinic(@RequestBody @Valid ClinicDto dto){
+        Clinic clinic = clinicService.createClinic(dto);
+        return new ResponseEntity<>(new ClinicDto(clinic), HttpStatus.CREATED);
     }
     @GetMapping
     @Operation(
@@ -54,5 +56,6 @@ public class ClinicController {
         clinicService.deleteClinicById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
 }
 
